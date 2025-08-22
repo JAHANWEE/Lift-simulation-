@@ -237,7 +237,7 @@ const animateLift = (liftNumber, targetFloor, direction) => {
     setTimeout(() => {
         liftElement.classList.add('open');
 
-        let sound = new Audio("ding.mp3"); // added ding audio 
+        let sound = new Audio("./ding.mp3"); // added ding audio 
         sound.play();
         setTimeout(() => {
             // Close the lift doors after 2.5 seconds
