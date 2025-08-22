@@ -1,0 +1,146 @@
+body {
+  background-color: #e6e0f8;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #d49cd8;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading {
+  color: rgba(1, 5, 255, 0.676);
+  text-align: center;
+}
+
+/*form style*/
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-element {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 10px;
+}
+
+label {
+  font-size: 20px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.submitButton {
+  background-color: #05ba65bc;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #1e620a;
+}
+
+/*generated floors and lifts */
+.floor {
+  border-bottom: 2px solid #000000;
+  height: 100px;
+  min-width: 100%;
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+}
+
+.floorControl {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.down-button,
+.up-button {
+  background-color: rgb(32, 145, 193);
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.down-button:disabled,
+.down-button[disabled],
+.up-button:disabled,
+.up-button[disabled] {
+  border: 3px solid #ff0000;
+  background-color: #c8f2e6;
+  color: #ff0000;
+}
+
+.lift {
+  height: 100px;
+  width: 70px;
+  background-color: gray;
+  position: relative;
+
+  overflow: hidden;
+  transition: all 2.5s linear;
+}
+
+.left-door {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+  background-color: pink;
+  border: 2px solid #000000;
+  transition: transform 2.5s linear;
+  transform-origin: left;
+}
+
+.right-door {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 50%;
+  background-color:pink;
+  border: 2px solid #000000;
+  transition: transform 2.5s linear;
+  transform-origin: right;
+}
+
+.lift.open .left-door {
+  transform: translateX(-100%);
+}
+
+.lift.open .right-door {
+  transform: translateX(100%);
+}

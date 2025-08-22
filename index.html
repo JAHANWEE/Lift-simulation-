@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lift Simulation</title>
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Lift Simulation</h1>
+        <form onsubmit="Lift_Simulation(event)">
+            <!--label for lifts -->
+            <div class="form-element">
+                <label for="lifts">Enter Number Of Lifts</label>
+                <input type="number" id="lifts" name="lifts" placeholder="Enter a number between 1 -15" required>
+            </div>
+
+            <!--label for floors -->
+            <div class="form-element">
+                <label for="floors">Enter Number Of Floors</label>
+                <input type="number" id="floors" name="floors" placeholder="Enter a number between 1-15" required>
+            </div>
+
+            <!-- Submit button -->
+            <button class="submitButton" type="submit">Generate</button>
+        </form>
+    </div>
+</body>
+    <script src ="/main.js"></script>
+</html>
