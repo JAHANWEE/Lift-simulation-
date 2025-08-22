@@ -40,7 +40,7 @@ const datastore = {
     },
 
     updateLiftStatus(liftIndex,status){
-        this.isLiftBusy[liftIndex]=status;
+        this.isLiftBusy[liftIndex] = status;
         console.log(`Lift ${liftIndex} status now updated to → ${status ? "Busy" : "Free"}`);
     },
 
@@ -81,7 +81,7 @@ const generateFloors = (numFloors) =>{
     floorContainer.id = "floorContainer";
     floorContainer.classList.add('floorContainer');
 
-    for(let i=numFloors -1 ;i >=0; i--){
+    for(let i = numFloors -1 ;i >=0; i--){
         const floor = document.createElement('div');
         floor.id = `floor-${i}`;
         floor.classList.add('floor');
@@ -102,7 +102,7 @@ const generateFloors = (numFloors) =>{
         const floorNumber = document.createElement('span');
         floorNumber.classList.add(`floor-number`);
         floorNumber.textContent = `Floor ${i}`;
-        floorContainer.appendChild(floorNumber);
+        floorControls.appendChild(floorNumber);
 
         if(i!== 0){
             const downButton = document.createElement('button');
